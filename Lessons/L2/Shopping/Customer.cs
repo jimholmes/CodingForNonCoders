@@ -1,4 +1,4 @@
-namespace MyApp.Shopping
+namespace Shopping
 {
     internal class Customer
     {

@@ -1,9 +1,9 @@
 namespace NamespaceExamples.MyApp.Display
 {
-    class Video
+    class LCD
     {
         public void DrawSomethingOnDisplay() {
-            // Implementation for a video display
+            // Implementation for a LCD display
         }
     }
 }

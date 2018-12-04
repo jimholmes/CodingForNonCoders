@@ -1,11 +1,13 @@
-namespace System.InputOutput.USB
+namespace NamespaceExamples.MyApp.IO.USB
 {
     class Reader
     {
+        public string ReadAFile(string filename){
+            //This would be implementation details
+            // specific for reading a file from a 
+            // **USB** device.
 
-        public string ReadFromDevice() {
-            //do something here
-            return "stuff";
+            return "File contents";
         }
     }
 }

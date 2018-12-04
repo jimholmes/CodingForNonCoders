@@ -1,4 +1,4 @@
-namespace MyApp.Shopping
+namespace Shopping
 {
     public class DeliveryEngine
     {

@@ -1,4 +1,4 @@
-namespace MyApp.Threading
+namespace NamespaceExamples.MyApp.Threading
 {
     class Thread
     {

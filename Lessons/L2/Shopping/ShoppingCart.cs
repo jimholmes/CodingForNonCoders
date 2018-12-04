@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MyApp.Shopping {
+namespace Shopping {
 
     class ShoppingCart {
         private Customer customer;
@@ -20,7 +20,11 @@ namespace MyApp.Shopping {
         }
 
         public void AddItemToCart(Product item) {
-            cartItems.Add(item);
+            bool isAvail = Availability.CheckAvailability(item);
+            if (isAvail)
+            {
+                 cartItems.Add(item);
+            }
         }
 
         public Money ComputeCartShippingCosts(DeliveryEngine engine, Order order){
