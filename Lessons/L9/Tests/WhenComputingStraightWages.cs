@@ -6,7 +6,18 @@ namespace L9.Tests
 {
     public class WhenComputingStraightWages
     {
+        /*
+            I've left two different approaches for handling the "Arrange"
+            part of these tests -- one using a class-level variable
+            for the wage calculator, and the other using test-level variables.
 
+            This shows how you can use NUnit's SetUp to handle configuration,
+            initialization, etc. within the fixture/class versus each individual
+            test.
+
+            Please listen closely to the discussion in L9 on some of the subtleties
+            of why this may or may not be a good approach. Be thoughtful!
+         */
         HourlyWageCalculator calculatorClassVariable;
 
         [SetUp]
