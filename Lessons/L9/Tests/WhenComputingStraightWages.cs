@@ -47,5 +47,20 @@ namespace L9.Tests
             decimal wages = calculator.ComputeWages(40, 10);
             Assert.AreEqual(400, wages);
         }
+
+        [TestCase(0, 10, 0)]
+        [TestCase(1,10,10)]
+        [TestCase(40,10,400)]
+        public void CheckAllStraightTimeBoundaryValues(int hoursWorked, 
+                                                        int hourlyRate, 
+                                                        decimal expectWages) {
+            HourlyWageCalculator calculator = new HourlyWageCalculator();
+            decimal actualWages = calculator.ComputeWages(hoursWorked, hourlyRate);
+            Assert.AreEqual(expectWages, actualWages, "TestCase Data: Hours Worked:" + hoursWorked +
+                                                                      " Hourly Rate: " + hourlyRate +
+                                                                      " Expected: " + expectWages);
+        }
+
+        
     }
 }
