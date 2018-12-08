@@ -4,17 +4,37 @@ namespace L10.Payroll
 {
     public class HourlyWageCalculator
     {
+        private const int MAX_STRAIGHT_TIME_HOURS = 40;
+        private const decimal OVERTIME_MULTIPLIER = 1.5m;
+        private const int MAX_HOURS = 80;
+        private const int MAX_HOURLY_RATE = 500;
+
         public decimal ComputeWages(int hoursWorked, int hourlyRate)
         {
-            if (hoursWorked > 40)
+            if (hoursWorked > MAX_HOURS)
             {
-                int otHours = hoursWorked - 40;
-                decimal otWages = otHours * hourlyRate * 1.5m;
-                decimal wages = otWages + (40 * hourlyRate);
-                return wages;
-            } else {
-                return hoursWorked * hourlyRate;
+                throw new System.ArgumentException("Over MAX_HOURS. hoursWorked: " +
+                                                    hoursWorked);
             }
+
+            if (hourlyRate > MAX_HOURLY_RATE)
+            {
+                throw new System.ArgumentException("Over MAX_HOURLY_RATE. hourlyRate: " +
+                                                    hourlyRate);                
+            }
+
+            decimal wages=0;
+
+            if (hoursWorked > MAX_STRAIGHT_TIME_HOURS)
+            {
+                int otHours = hoursWorked - MAX_STRAIGHT_TIME_HOURS;
+                decimal otWages = otHours * hourlyRate * OVERTIME_MULTIPLIER;
+                wages = otWages + MAX_STRAIGHT_TIME_HOURS * hourlyRate;
+            } else {
+                wages = hoursWorked * hourlyRate;
+            }
+            
+            return wages;
         }
     }
 }
