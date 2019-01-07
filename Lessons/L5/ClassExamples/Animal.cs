@@ -7,20 +7,9 @@ namespace ClassExamples
         
         private int respirationRate;
 
-        public int RespirationRate {
-            get {
-                return respirationRate;
-            }
-        }
-
         public void Breathe(){
+            respirationRate = 5;
         }
 
-        public void Move(int speed){
-
-            respirationRate = speed * 5;
-            
-            //ignore for now how to actually move
-        }
     }  
 }
