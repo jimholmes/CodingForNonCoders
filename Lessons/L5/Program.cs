@@ -7,14 +7,24 @@ namespace L5
         static void Main(string[] args)
         {
 
-            int count = 1; // = is assignment
-            if (count == 1) // == is equivalency test
+            for (int loopCount = 0; loopCount < 10; loopCount++)
             {
-                //if true do this stuff
+                Console.WriteLine("loopCount: " + loopCount);
             }
 
-            
-            Console.WriteLine("Hello World!");
+            int doCount = 0;
+            do
+            {
+                Console.WriteLine("Do Loop Count = " + doCount);
+                doCount++;
+            } while (doCount < 5);
+
+            int whileCount = 0;
+            while (whileCount < 5)
+            {
+                Console.WriteLine("While Loop Count = " + whileCount);
+                whileCount++;           
+            }
         }
     }
 }
