@@ -1,6 +1,6 @@
 using System;
 
-namespace L10.Spike
+namespace L10.ExceptionHandlingExample
 {
     /*
         A simple object to show you the concept of passing objects as

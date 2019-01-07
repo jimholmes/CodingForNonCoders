@@ -1,6 +1,6 @@
 using System;
 
-namespace L10.Spike
+namespace L10.ExceptionHandlingExample
 {
     /*
         Part of the very contrived example to demonstrate exception flow.
