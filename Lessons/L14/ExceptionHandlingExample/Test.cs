@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace L14.Spike
+namespace L14.ExceptionHandlingExample
 {
     public class TestToDrive{
 

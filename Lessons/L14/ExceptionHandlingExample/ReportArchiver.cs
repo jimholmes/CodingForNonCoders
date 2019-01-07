@@ -1,6 +1,6 @@
 using System;
 
-namespace L14.Spike
+namespace L14.ExceptionHandlingExample
 {
     /*
         A contrived example which hides report storage location 
