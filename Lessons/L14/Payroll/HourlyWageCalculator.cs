@@ -1,6 +1,6 @@
 using System;
 
-namespace L11.Payroll
+namespace L14.Payroll
 {
     public class HourlyWageCalculator
     {
